@@ -1,0 +1,173 @@
+// Local Fonts
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-BlackItalic-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-BlackItalic-Web.woff') format('woff');
+  font-weight:  800;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+// .Graphik-BlackItalic-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  800;
+//   font-style:   italic;
+//   font-stretch: normal;
+// }
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-Black-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-Black-Web.woff') format('woff');
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+// .Graphik-Black-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  800;
+//   font-style:   normal;
+//   font-stretch: normal;
+// }
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-SemiboldItalic-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-SemiboldItalic-Web.woff') format('woff');
+  font-weight:  600;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+// .Graphik-SemiboldItalic-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  600;
+//   font-style:   italic;
+//   font-stretch: normal;
+// }
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-Semibold-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-Semibold-Web.woff') format('woff');
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+// .Graphik-Semibold-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  600;
+//   font-style:   normal;
+//   font-stretch: normal;
+// }
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-RegularItalic-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-RegularItalic-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+// .Graphik-RegularItalic-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  400;
+//   font-style:   italic;
+//   font-stretch: normal;
+// }
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../fonts/Graphik-Regular-Web.woff2') format('woff2'),
+       url('../fonts/Graphik-Regular-Web.woff') format('woff');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+// .Graphik-Regular-Web {
+//   font-family: 'Graphik Web';
+//   font-weight:  400;
+//   font-style:   normal;
+//   font-stretch: normal;
+// }
+
+
+// Sans-Serif font: Graphik
+
+@mixin font-sans-serif-regular {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin font-sans-serif-regular-italic {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@mixin font-sans-serif-black {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin font-sans-serif-black-italic {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  800;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@mixin font-sans-serif-semibold {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@mixin font-sans-serif-semibold-italic {
+  font-family: 'Graphik Web', sans-serif;
+  font-weight:  600;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+
+// Serif font: Bely
+
+@mixin font-serif-regular {
+  font-family: 'bely', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-serif-regular-italic {
+  font-family: 'bely', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-serif-bold {
+  font-family: 'bely', serif;
+  font-weight: 700;
+  font-weight: bold;
+}
+
+@mixin font-serif-bold-italic {
+  font-family: 'bely', serif;
+  font-weight: 700;
+  font-style: italic;
+}
