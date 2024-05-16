@@ -7,5 +7,5 @@
  */
 
 @function cols($num, $total: $layout-columns) {
-	@return ($num / $total) * 100%;
+  @return ($num / $total) * 100%;
 }

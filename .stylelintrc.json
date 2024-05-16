@@ -1,9 +1,12 @@
 {
   "extends": "stylelint-config-sass-guidelines",
+  "plugins": ["stylelint-order"],
   "rules": {
     "indentation": 2,
     "max-nesting-depth": 8,
     "selector-max-compound-selectors": 8,
-    "number-leading-zero": null
+    "number-leading-zero": null,
+    "order/order": ["custom-properties", "declarations"],
+    "order/properties-alphabetical-order": true
   }
 }

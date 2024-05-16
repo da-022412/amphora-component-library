@@ -4,22 +4,32 @@ export const createHero = ({ eyebrow, title, cards }) => {
   return `
     <section class="cc--hero">
       <div class="c--hero">
-        <div class="f--eyebrow">
-          <span>${eyebrow}</span>
+        <div class="inner-container">
+          <div class="text-container">
+            <div class="f--eyebrow">
+              <span>${eyebrow}</span>
+            </div>
+
+            <div class="f--page-title">
+              <h1>${title}</h1>
+            </div>
+          </div>
         </div>
 
-        <div class="f--page-title">
-          <h1>${title}</h1>
-        </div>
-
-        <div class="cards">
+        <div class="cards-container">
           ${cards
             .map(
               (card) => `
-                <div class="card">
-                  <img src="${card.image}" alt="${card.title}" />
-                  <h2>${card.title}</h2>
-                  <p>${card.description}</p>
+                <div class="card-item">
+                  <div class="f--image">
+                    <img src="${card.image}" alt="${card.title}" />
+                  </div>
+                  <div class="f--cta-title">
+                    <h3>${card.title}</h3>
+                  </div>
+                  <div class="f--description">
+                    <p>${card.description}</p>
+                  </div>
                 </div>
               `
             )

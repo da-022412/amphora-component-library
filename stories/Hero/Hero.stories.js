@@ -16,21 +16,24 @@ export default {
 export const Primary = {
   args: {
     eyebrow: "Eyebrow Lorem Ipsum",
-    title: "Title Lorem Ipsum Dolor Sit Amet",
+    title: "Title Lorem Ipsum Dolor Sit",
     cards: [
       {
         title: "Card 1",
-        description: "Description 1",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
         image: "https://picsum.photos/100",
       },
       {
         title: "Card 2",
-        description: "Description 2",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
         image: "https://picsum.photos/100",
       },
       {
         title: "Card 3",
-        description: "Description 3",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
         image: "https://picsum.photos/100",
       },
     ],
