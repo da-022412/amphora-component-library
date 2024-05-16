@@ -1,6 +1,6 @@
 import "./hero.scss";
 
-export const createHero = ({ eyebrow, title, cards }) => {
+export const createHero = ({ eyebrow, title, link, cards }) => {
   return `
     <section class="cc--hero">
       <div class="c--hero">
@@ -13,6 +13,12 @@ export const createHero = ({ eyebrow, title, cards }) => {
             <div class="f--page-title">
               <h1>${title}</h1>
             </div>
+
+            <div class="f--link">
+              <a href="${link.href}" aria-label="${link.ariaLabel}">
+                ${link.cta}
+              </a>
+            </div>
           </div>
         </div>
 
@@ -22,7 +28,7 @@ export const createHero = ({ eyebrow, title, cards }) => {
               (card) => `
                 <div class="card-item">
                   <div class="f--image">
-                    <img src="${card.image}" alt="${card.title}" />
+                    <img src="${card.image.src}" alt="${card.image.alt}" />
                   </div>
                   <div class="f--cta-title">
                     <h3>${card.title}</h3>

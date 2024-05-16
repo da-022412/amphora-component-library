@@ -27,7 +27,7 @@
         z-index: 1;
 
         @include mq($bp768) {
-          background: linear-gradient(90deg, rgba($color-white, 1) 25%, rgba($color-white, 0) 100%);
+          background: linear-gradient(90deg, rgba($color-white, 0.95) 25%, rgba($color-white, 0) 100%);
         }
       }
     }
@@ -65,8 +65,13 @@
       }
 
       .f--page-title {
+        @include margin(null null rem(28));
         position: relative;
         z-index: 2;
+
+        @include mq($bp768) {
+          @include margin(null null rem(40));
+        }
 
         @include mq($bp1200) {
           width: cols(8);
@@ -82,6 +87,33 @@
 
           @include mq($bp1200) {
             @include font-size(56, 64);
+          }
+        }
+      }
+
+      .f--link {
+        position: relative;
+        z-index: 2;
+
+        a {
+          @include font-sans-serif-bold;
+          @include font-size(16, 20);
+          @include padding(rem(16) rem(48));
+          background-color: $color-primary;
+          color: $color-white;
+          text-decoration: none;
+          transition: all $transition-duration-default $transition-easing-default;
+
+          @include mq($bp768) {
+            @include padding(null rem(32));
+          }
+
+          @include mq($bp1200) {
+            @include padding(null rem(48));
+          }
+
+          &:hover {
+            background-color: $color-black;
           }
         }
       }
