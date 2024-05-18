@@ -17,7 +17,7 @@ export default {
 
 export const Primary = {
   args: {
-    title: "Title Lorem Ipsum Dolor",
+    title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit",
     link: {
       href: "https://www.example.com/",
       cta: "Get Started",
