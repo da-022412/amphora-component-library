@@ -1,0 +1,78 @@
+@import '../../src/scss/style';
+
+.cc--call-to-action {
+  @include padding(rem(60) rem(16));
+  background-color: $color-primary;
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--call-to-action {
+    @include maxwidth;
+
+    @include mq($bp1200) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .f--section-title {
+      text-align: center;
+
+      @include mq($bp1200) {
+        flex: 0 0 cols(7);
+        text-align: left;
+      }
+
+      h2 {
+        @include font-sans-serif-bold;
+        @include font-size(32, 40);
+        color: $color-white;
+
+        @include mq($bp1200) {
+          @include font-sans-serif-black;
+          @include font-size(48, 60);
+        }
+      }
+    }
+
+    .f--link {
+      @include margin(rem(48) auto null);
+      text-align: center;
+
+      @include mq($bp1200) {
+        @include margin(0 0 null);
+        flex: 0 0 cols(5);
+        text-align: right;
+      }
+
+      a {
+        @include font-sans-serif-bold;
+        @include font-size(16, 20);
+        @include padding(rem(16) rem(48));
+        background-color: $color-white;
+        color: $color-black;
+        display: inline-block;
+        text-decoration: none;
+        transition: all $transition-duration-default $transition-easing-default;
+
+        @include mq($bp768) {
+          @include padding(null rem(32));
+        }
+
+        @include mq($bp1200) {
+          @include padding(null rem(48));
+        }
+
+        &:hover {
+          background-color: $color-black;
+        }
+      }
+    }
+  }
+}
