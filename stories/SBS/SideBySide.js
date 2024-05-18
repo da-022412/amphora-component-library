@@ -1,6 +1,6 @@
 import "./side-by-side.scss";
 
-export const createHero = ({
+export const createSideBySide = ({
   eyebrow,
   title,
   description,

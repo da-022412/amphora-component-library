@@ -1,10 +1,10 @@
-import { createHero } from "./SideBySide";
+import { createSideBySide } from "./SideBySide";
 
 export default {
   title: "Side By Side",
   tags: ["autodocs"],
   render: ({ ...args }) => {
-    return createHero({ ...args });
+    return createSideBySide({ ...args });
   },
   argTypes: {
     eyebrow: { control: "text" },
@@ -16,6 +16,7 @@ export default {
     card: { control: "object" },
     imageMain: { control: "object" },
     imageSecondary: { control: "object" },
+    cards: { control: "array" },
     reverse: {
       control: { type: "select" },
       options: ["yes", "no"],
@@ -124,18 +125,15 @@ export const Secondary = {
     cards: [
       {
         title: "123",
-        description:
-          "Lorem ipsum",
+        description: "Lorem ipsum",
       },
       {
         title: "123",
-        description:
-          "Lorem ipsum",
+        description: "Lorem ipsum",
       },
       {
         title: "123",
-        description:
-          "Lorem ipsum",
+        description: "Lorem ipsum",
       },
     ],
   },
