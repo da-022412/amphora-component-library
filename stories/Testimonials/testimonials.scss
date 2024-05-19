@@ -1,0 +1,139 @@
+@import '../../src/scss/style';
+
+.cc--testimonials {
+  @include padding(rem(60) rem(16));
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--testimonials {
+    @include maxwidth;
+
+    .text-container {
+      @include margin(null null rem(48));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+
+      @include mq($bp1200) {
+        @include margin(null null rem(64));
+        @include padding(null cols(3));
+      }
+
+      .f--eyebrow {
+        @include margin(null null rem(4));
+        color: $color-primary;
+
+        span {
+          @include font-sans-serif-condensed;
+          @include font-size(12, 16);
+          letter-spacing: rem(1.3);
+          text-transform: uppercase;
+
+          @include mq($bp1200) {
+            @include font-size(16, 20);
+            letter-spacing: rem(1.6);
+          }
+        }
+      }
+
+      .f--section-title {
+        @include margin(null null rem(16));
+
+        h2 {
+          @include font-sans-serif-bold;
+          @include font-size(32, 40);
+          color: $color-black;
+
+          @include mq($bp1200) {
+            @include font-sans-serif-black;
+            @include font-size(48, 60);
+          }
+        }
+      }
+
+      .f--description {
+        p {
+          @include font-sans-serif-regular;
+          @include font-size(16, 24);
+        }
+      }
+    }
+
+    .cards-container {
+      @include mq($bp768) {
+        column-gap: rem(20);
+        display: flex;
+      }
+
+      .card-item {
+        @include padding(rem(24));
+        background-color: $color-accent;
+
+        @include mq($bp768) {
+          flex: 0 0 calc(cols(6) - rem(10));
+        }
+
+        @include mq($bp1200) {
+          @include padding(rem(32) rem(40));
+        }
+
+        &:not(:last-child) {
+          @include margin(null null rem(16));
+
+          @include mq($bp768) {
+            @include margin(null null 0);
+          }
+        }
+
+        .item-quote {
+          @include font-size(56, 40);
+          color: $color-primary;
+          display: block;
+        }
+
+        .f--image {
+          @include margin(null auto rem(24));
+          max-width: rem(64);
+          width: auto;
+
+          img {
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .f--cta-title {
+          h3 {
+            @include font-sans-serif-bold;
+            @include font-size(20, 24);
+          }
+        }
+
+        .f--description {
+          @include margin(null null rem(20));
+
+          p {
+            @include font-sans-serif-regular;
+            @include font-size(16, 24);
+          }
+        }
+
+        .item-credit {
+          @include font-sans-serif-regular;
+          @include font-size(12, 16);
+          color: rgba($color-black, 0.5);
+          display: block;
+        }
+      }
+    }
+  }
+}
