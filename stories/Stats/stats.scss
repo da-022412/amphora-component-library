@@ -1,0 +1,97 @@
+@import '../../src/scss/style';
+
+.cc--stats {
+  @include padding(rem(60) rem(16));
+  background-color: $color-primary;
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(rem(100) rem(32));
+  }
+
+  .c--stats {
+    @include maxwidth;
+
+    .cards-container {
+      @include no-bullet;
+      @include vertical-align-flex;
+      align-items: center;
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+        align-items: start;
+        column-gap: rem(20);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: rem(40);
+      }
+
+      @include mq($bp1200) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 0;
+      }
+
+      .card-item {
+        align-items: flex-start;
+        column-gap: rem(12);
+        display: flex;
+        width: rem(220);
+
+        @include mq($bp1200) {
+          align-items: flex;
+          column-gap: rem(20);
+          justify-content: center;
+          width: auto;
+        }
+
+        &:not(:last-child) {
+          @include margin(null null rem(40));
+
+          @include mq($bp768) {
+            @include margin(null null 0);
+          }
+        }
+
+        .f--image {
+          aspect-ratio: 1 / 1;
+          flex: 0 0 rem(80);
+
+          img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+
+        .text-container {
+          .f--cta-title {
+            h3 {
+              @include font-sans-serif-bold;
+              @include font-size(40, 48);
+              color: $color-white;
+
+              @include mq($bp768) {
+                @include font-size(32, 40);
+              }
+
+              @include mq($bp1200) {
+                @include font-size(48, 60);
+              }
+            }
+          }
+
+          .f--description {
+            p {
+              @include font-sans-serif-regular;
+              @include font-size(16, 24);
+              color: rgba($color-white, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
