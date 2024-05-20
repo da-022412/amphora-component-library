@@ -1,0 +1,76 @@
+@import '../../src/scss/style';
+
+.cc--banner {
+  @include padding(rem(100) rem(16));
+  background-color: $color-primary;
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--banner {
+    @include maxwidth;
+
+    .f--page-title {
+      @include margin(null null rem(8));
+
+      h1 {
+        @include font-sans-serif-black;
+        @include font-size(40, 48);
+        color: $color-white;
+
+        @include mq($bp768) {
+          @include font-size(48, 56);
+        }
+
+        @include mq($bp1200) {
+          @include font-size(56, 64);
+        }
+      }
+    }
+
+    .breadcrumbs {
+      @include no-bullet;
+      column-gap: rem(16);
+      display: flex;
+
+      li {
+        position: relative;
+
+        &:not(:last-child) {
+          &::after {
+            @include chevron(rem(6), rem(2), $color-white, 'right');
+            @include margin(null null rem(2) rem(16));
+            content: ''; 
+          }
+        }
+
+        &:first-child {
+          a {
+            color: $color-white;
+          }
+        }
+
+        &:nth-child(2) {
+          a {
+            color: $color-secondary;
+          }
+        }
+
+        a {
+          @include font-sans-serif-bold;
+          @include font-size(16, 20);
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
