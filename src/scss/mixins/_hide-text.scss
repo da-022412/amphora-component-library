@@ -2,9 +2,9 @@
 * Hide Text
 */
 @mixin hide-text {
+  font-size: 0;
+  line-height: 0;
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  font-size: 0;
-  line-height: 0;
 }

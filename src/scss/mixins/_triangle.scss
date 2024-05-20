@@ -10,9 +10,9 @@
     @error "Direction must be either `top`, `right`, `bottom` or `left`.";
   }
 
-  width: 0;
-  height: 0;
   content: '';
+  height: 0;
+  width: 0;
   z-index: 2;
   border-#{opposite-position($direction)}: ($size * 1) solid $color;
 
