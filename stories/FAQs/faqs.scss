@@ -1,0 +1,161 @@
+@import '../../src/scss/style';
+
+.cc--faqs {
+  @include padding(rem(60) rem(16));
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--faqs {
+    @include maxwidth;
+
+    @include mq($bp1200) {
+      column-gap: cols(0.5);
+      display: flex;
+    }
+
+    .text-container {
+      @include margin(null null rem(48));
+      text-align: center;
+
+      @include mq($bp1200) {
+        flex: 0 0 cols(5);
+        text-align: left;
+      }
+
+      .f--eyebrow {
+        @include margin(null null rem(4));
+        color: $color-primary;
+
+        span {
+          @include font-sans-serif-condensed;
+          @include font-size(12, 16);
+          letter-spacing: rem(1.3);
+          text-transform: uppercase;
+
+          @include mq($bp1200) {
+            @include font-size(16, 20);
+            letter-spacing: rem(1.6);
+          }
+        }
+      }
+
+      .f--section-title {
+        @include margin(null null rem(16));
+
+        @include mq($bp768) {
+          @include margin(null null 0);
+        }
+
+        h2 {
+          @include font-sans-serif-bold;
+          @include font-size(32, 40);
+          color: $color-black;
+
+          @include mq($bp1200) {
+            @include font-sans-serif-black;
+            @include font-size(48, 60);
+          }
+        }
+      }
+    }
+
+    .accordions-container {
+      @include mq($bp768) {
+        @include padding(null cols(1));
+      }
+
+      @include mq($bp1200) {
+        flex: 0 0 cols(6.5);
+        padding: 0;
+      }
+
+      .accordion-item {
+        @include vertical-align-flex;
+        border: rem(1) solid rgba($color-black, 0.25);
+        transition: all $transition-duration-fast $transition-easing-default;
+
+        &:not(:last-child) {
+          @include margin(null null rem(12));
+        }
+
+        &.is-active {
+          .f--cta-title {
+            background-color: $color-primary;
+
+            h3 {
+              color: $color-white;
+            }
+
+            &::before {
+              border-color: $color-white;
+              transform: rotate(45deg) translate(rem(6), calc(-50%));
+            }
+          }
+
+          .f--description {
+            display: block;
+          }
+        }
+
+        .f--cta-title {
+          @include padding(rem(16));
+          position: relative;
+
+          @include mq($bp768) {
+            @include padding(rem(16) rem(24));
+          }
+
+          &:hover {
+            background-color: $color-primary;
+            cursor: pointer;
+
+            h3 {
+              color: $color-white;
+            }
+
+            &::before {
+              border-color: $color-white;
+            }
+          }
+
+          &::before {
+            @include centered(y);
+            @include chevron(rem(12), rem(2), $color-black, 'down');
+            content: '';
+            right: rem(28);
+            transform: rotate(225deg) translateY(calc(50% + rem(6)));
+
+            @include mq($bp768) {
+              right: rem(36);
+            }
+          }
+
+          h3 {
+            @include font-sans-serif-bold;
+            @include font-size(20, 24);
+          }
+        }
+
+        .f--description {
+          @include padding(rem(16));
+          display: none;
+
+          @include mq($bp768) {
+            @include padding(rem(16) rem(24));
+          }
+
+          p {
+            @include font-sans-serif-regular;
+            @include font-size(16, 24);
+          }
+        }
+      }
+    }
+  }
+}
