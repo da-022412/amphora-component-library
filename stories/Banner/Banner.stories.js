@@ -18,10 +18,6 @@ export default {
 export const Primary = {
   args: {
     title: "Lorem Ipsum",
-    link: {
-      href: "https://www.example.com/",
-      cta: "Get Started",
-      ariaLabel: "An Example Aria Label for CTA Link",
-    },
+    activeItem: "Get started",
   },
 };

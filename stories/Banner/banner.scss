@@ -35,7 +35,7 @@
 
     .breadcrumbs {
       @include no-bullet;
-      column-gap: rem(16);
+      column-gap: rem(18);
       display: flex;
 
       li {
@@ -55,19 +55,33 @@
           }
         }
 
-        &:nth-child(2) {
-          a {
-            color: $color-secondary;
-          }
+        span {
+          @include font-sans-serif-bold;
+          @include font-size(16, 20);
+          color: $color-secondary;
         }
 
         a {
           @include font-sans-serif-bold;
           @include font-size(16, 20);
+          position: relative;
           text-decoration: none;
 
+          &::after {
+            background-color: $color-white;
+            bottom: 0;
+            content: '';
+            display: none;
+            height: rem(1);
+            left: 0;
+            position: absolute;
+            width: calc(100% - rem(4));
+          }
+
           &:hover {
-            text-decoration: underline;
+            &::after {
+              display: block;
+            }
           }
         }
       }

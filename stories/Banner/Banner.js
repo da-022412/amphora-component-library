@@ -1,6 +1,6 @@
 import "./banner.scss";
 
-export const createBanner = ({ title, link }) => {
+export const createBanner = ({ title, activeItem }) => {
   return `
     <section class="cc--banner">
       <div class="c--banner">
@@ -15,9 +15,7 @@ export const createBanner = ({ title, link }) => {
             </a>
           </li>
           <li>
-            <a href="${link.href}" aria-label="${link.ariaLabel}">
-              ${link.cta}
-            </a>
+            <span>${activeItem}</span>
           </li>
         </ul>
       </div>
