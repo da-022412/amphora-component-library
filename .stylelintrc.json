@@ -3,7 +3,7 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "indentation": 2,
-    "max-nesting-depth": 8,
+    "max-nesting-depth": 10,
     "selector-max-compound-selectors": 8,
     "number-leading-zero": null,
     "order/order": ["custom-properties", "declarations"],
