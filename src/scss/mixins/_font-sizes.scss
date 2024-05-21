@@ -10,9 +10,11 @@
 *     }
 *
 */
+@use 'sass:math';
+
 @mixin font-size ($fontsize, $leading: null) {
-  font-size: ($fontsize / 16) * 1rem;
+  font-size: calc(($fontsize / 16) * 1rem);
   @if ($fontsize and $leading) {
-    line-height: ceil(($leading / $fontsize) * 10000) / 10000;
+    line-height: calc(math.ceil(calc($leading / $fontsize) * 10000) / 10000);
   }
 }
