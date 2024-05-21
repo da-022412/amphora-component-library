@@ -1,0 +1,125 @@
+@import '../../src/scss/style';
+
+.cc--footer {
+  @include padding(rem(60) rem(16));
+  background-color: $color-black;
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(rem(100) rem(32));
+  }
+
+  .c--footer {
+    @include maxwidth;
+
+    .navigation-container {
+      @include vertical-align-flex;
+      @include padding(null null rem(32));
+      align-items: center;
+      border-bottom: rem(1) solid rgba($color-white, 0.25);
+
+      @include mq($bp768) {
+        column-gap: cols(1);
+        flex-direction: row;
+      }
+
+      .f--image {
+        @include margin(null null rem(32));
+
+        @include mq($bp768) {
+          flex: 0 0 cols(3);
+          margin: 0;
+        }
+      }
+
+      .navigation {
+        align-items: center;
+        column-gap: rem(28);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: rem(8);
+
+        @include mq($bp768) {
+          @include margin(null null null auto);
+          flex-wrap: nowrap;
+        }
+
+        .f--link {
+          a {
+            @include font-sans-serif-regular;
+            @include font-size(16, 20);
+            color: $color-white;
+            text-decoration: none;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+
+          &.is-active {
+            a {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .info-container {
+      @include margin(rem(32) null null);
+
+      @include mq($bp768) {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .icons-container {
+        align-items: center;
+        column-gap: rem(8);
+        display: flex;
+        justify-content: center;
+
+        a {
+          @include vertical-align-flex;
+          align-items: center;
+          background-color: rgba($color-white, 0.1);
+          height: rem(32);
+          transition: all $transition-duration-default $transition-easing-default;
+          width: rem(32);
+
+          &:hover {
+            background-color: $color-primary;
+
+            img {
+              filter: none;
+            }
+          }
+
+          img {
+            filter: invert(1) brightness(0);
+            transition: all $transition-duration-default $transition-easing-default;
+          }
+        }
+      }
+
+      .legal-container {
+        @include margin(rem(24) null null);
+        text-align: center;
+
+        @include mq($bp768) {
+          margin: 0;
+        }
+
+        p {
+          @include font-sans-serif-regular;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
