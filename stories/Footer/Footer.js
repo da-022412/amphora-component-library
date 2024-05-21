@@ -1,6 +1,6 @@
 import "./footer.scss";
 
-export const createFooter = ({ image, links, icons }) => {
+export const createFooter = ({ image, items, links }) => {
   const year = new Date().getFullYear();
 
   return `
@@ -16,12 +16,12 @@ export const createFooter = ({ image, links, icons }) => {
           </div>
 
           <nav class="navigation">
-            ${links
+            ${items
               .map(
-                (link) => `
-                <div class="f--link ${link.active ? "is-active" : ""}">
-                  <a href="${link.href}" aria-label="${link.ariaLabel}">
-                    ${link.cta}
+                (item) => `
+                <div class="f--link ${item.active ? "is-active" : ""}">
+                  <a href="${item.href}" aria-label="${item.ariaLabel}">
+                    ${item.cta}
                   </a>
                 </div>
               `
@@ -32,13 +32,13 @@ export const createFooter = ({ image, links, icons }) => {
 
         <div class="info-container">
           <div class="icons-container">
-            ${icons
+            ${links
               .map(
-                (icon) => `
+                (link) => `
                   <div class="f--image">
-                    <a href="${icon.link.href}" aria-label="${icon.link.ariaLabel}">
+                    <a href="${link.link.href}" aria-label="${link.link.ariaLabel}">
                       <div class="image-container">
-                        <img src="${icon.src}" alt="${icon.alt}" />
+                        <img src="${link.src}" alt="${link.alt}" />
                       </div>
                     </a>
                   </div>

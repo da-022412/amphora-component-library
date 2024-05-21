@@ -8,8 +8,8 @@ export default {
   },
   argTypes: {
     image: { control: "object" },
+    items: { control: "array" },
     links: { control: "array" },
-    icons: { control: "array" },
   },
 };
 
@@ -19,7 +19,7 @@ export const Primary = {
       src: "https://picsum.photos/150/50",
       alt: "Alt 1",
     },
-    links: [
+    items: [
       {
         href: "https://www.example.com/",
         cta: "Home",
@@ -47,7 +47,7 @@ export const Primary = {
         ariaLabel: "An Example Aria Label for CTA Link",
       },
     ],
-    icons: [
+    links: [
       {
         src: "https://picsum.photos/20",
         alt: "Alt 1",
