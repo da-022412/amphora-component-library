@@ -1,0 +1,347 @@
+@import "../../src/scss/style";
+
+.cc--header {
+  .c--header {
+    .top-bar {
+      @include padding(rem(16));
+      background-color: $color-white;
+
+      @include mq($bp768) {
+        @include padding(rem(20) rem(24));
+      }
+
+      .inner-container {
+        @include maxwidth;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .links-container {
+        @include no-bullet;
+        display: none;
+
+        @include mq($bp1200) {
+          @include margin(null rem(24) null auto);
+          column-gap: rem(24);
+          display: flex;
+        }
+
+        .link a {
+          align-items: center;
+          column-gap: rem(20);
+          display: flex;
+          text-decoration: none;
+
+          &:visited {
+            color: inherit;
+          }
+
+          .f--image {
+            @include vertical-align-flex;
+            align-items: center;
+            aspect-ratio: 1 / 1;
+            background-color: $color-accent;
+            flex: 0 0 rem(56);
+            width: rem(56);
+
+            img {
+              height: rem(24);
+              object-fit: cover;
+              width: rem(24);
+            }
+          }
+
+          .f--cta-title {
+            h3 {
+              @include font-sans-serif-bold;
+              @include font-size(16, 24);
+              color: $color-black;
+            }
+          }
+
+          .f--description {
+            p {
+              @include font-sans-serif-regular;
+              @include font-size(12, 16);
+              color: $color-black;
+            }
+          }
+        }
+      }
+
+      .f--link {
+        display: none;
+
+        @include mq($bp768) {
+          display: block;
+        }
+
+        a {
+          @include font-sans-serif-bold;
+          @include font-size(16, 20);
+          @include padding(rem(16) rem(48));
+          background-color: $color-primary;
+          color: $color-white;
+          display: inline-block;
+          text-decoration: none;
+          transition: all $transition-duration-default
+            $transition-easing-default;
+
+          @include mq($bp768) {
+            @include padding(null rem(32));
+          }
+
+          @include mq($bp1200) {
+            @include padding(null rem(48));
+          }
+
+          &:hover {
+            background-color: $color-black;
+          }
+        }
+      }
+    }
+
+    .navigation-container {
+      @include padding(rem(16));
+      background-color: $color-black;
+      position: relative;
+
+      @include mq($bp768) {
+        @include padding(rem(20) rem(24));
+      }
+
+      @include mq($bp1200) {
+        @include padding(0 rem(32));
+        background-color: $color-primary;
+      }
+
+      .inner-container {
+        @include maxwidth;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navigation {
+        @include padding(rem(36) rem(16) null);
+        bottom: 0;
+        display: none;
+        overflow-y: auto;
+        position: fixed;
+        right: 0;
+        top: rem(186);
+        width: 100%;
+
+        @include mq($bp1200) {
+          display: block;
+          overflow-y: initial;
+          padding: 0;
+          position: static;
+          width: auto;
+        }
+
+        &.is-open {
+          display: block;
+        }
+
+        .mc--menu {
+          @include no-bullet;
+
+          @include mq($bp1200) {
+            column-gap: rem(32);
+            display: flex;
+          }
+
+          .menu-item {
+            @include padding(rem(10) rem(16));
+            text-align: right;
+
+            @include mq($bp1200) {
+              @include padding(rem(36) 0);
+              text-align: left;
+            }
+
+            &.has-submenu {
+              position: relative;
+
+              &::after {
+                @include chevron(rem(12), rem(2), $color-black, "down");
+              }
+
+              &:hover {
+                .submenu {
+                  @include mq($bp1200) {
+                    display: block;
+                  }
+                }
+              }
+            }
+
+            a,
+            button {
+              @include font-sans-serif-regular;
+              @include font-size(16, 20);
+              color: $color-black;
+              text-decoration: none;
+              transition: all $transition-duration-default
+                $transition-easing-default;
+
+              @include mq($bp1200) {
+                @include font-sans-serif-bold;
+                color: $color-white;
+                text-transform: uppercase;
+              }
+
+              &:hover {
+                color: $color-secondary;
+              }
+            }
+
+            button {
+              appearance: none;
+              background-color: transparent;
+              border: 0;
+              padding: 0;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .submenu {
+            @include no-bullet;
+            @include margin(rem(16) null null);
+            @include padding(rem(16) rem(24));
+            background-color: $color-primary;
+            display: none;
+
+            @include mq($bp1200) {
+              background-color: $color-white;
+              border-bottom: rem(3) solid $color-primary;
+              box-shadow: rgba($color-black, 0.2) 0 10px 16px;
+              margin: 0;
+              padding: 0;
+              position: absolute;
+              top: 100%;
+              width: rem(200);
+            }
+
+            &.is-open {
+              display: block;
+            }
+
+            .submenu-item {
+              @include padding(rem(10) null);
+
+              @include mq($bp1200) {
+                padding: 0;
+              }
+
+              a {
+                @include font-sans-serif-regular;
+                color: $color-white;
+                display: block;
+                text-transform: none;
+
+                @include mq($bp1200) {
+                  @include padding(rem(16) rem(24));
+                  color: $color-black;
+                }
+
+                &:hover {
+                  @include mq($bp1200) {
+                    background-color: $color-accent;
+                    color: $color-primary;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .mobile-menu-trigger {
+        @include vertical-align-flex;
+        align-items: center;
+        appearance: none;
+        background-color: rgba($color-white, 0.25);
+        border: 0;
+        height: rem(48);
+        width: rem(48);
+
+        @include mq($bp1200) {
+          display: none;
+        }
+
+        &.is-open {
+          .icon-hamburger {
+            display: none;
+          }
+
+          .icon-close {
+            display: block;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .icon-hamburger {
+          width: rem(32);
+        }
+
+        .icon-close {
+          display: none;
+        }
+      }
+    }
+
+    .link-container {
+      a {
+        align-items: center;
+        column-gap: rem(20);
+        display: flex;
+        text-decoration: none;
+
+        &:visited {
+          color: inherit;
+        }
+
+        .f--image {
+          @include vertical-align-flex;
+          align-items: center;
+          aspect-ratio: 1 / 1;
+          background-color: $color-white;
+          flex: 0 0 rem(56);
+          width: rem(56);
+
+          img {
+            height: rem(24);
+            object-fit: cover;
+            width: rem(24);
+          }
+        }
+
+        .f--cta-title {
+          h3 {
+            @include font-sans-serif-bold;
+            @include font-size(20, 24);
+            color: $color-white;
+          }
+        }
+
+        .f--description {
+          p {
+            @include font-sans-serif-regular;
+            @include font-size(16, 24);
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
