@@ -7,11 +7,8 @@ export default {
     return createBanner({ ...args });
   },
   argTypes: {
-    eyebrow: { control: "text" },
     title: { control: "text" },
-    description: { control: "text" },
-    cards: { control: "array" },
-    link: { control: "object" },
+    activeItem: { control: "text" },
   },
 };
 
