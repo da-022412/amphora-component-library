@@ -1,0 +1,157 @@
+@import '../../src/scss/style';
+
+.cc--blog-posts {
+  @include padding(rem(60) rem(16));
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--blog-posts {
+    @include maxwidth;
+
+    .text-container {
+      @include margin(null null rem(48));
+
+      @include mq($bp768) {
+        align-items: flex-start;
+        column-gap: rem(16);
+        display: flex;
+      }
+
+      @include mq($bp1200) {
+        @include margin(null null rem(64));
+        column-gap: cols(1);
+      }
+
+      .title-container {
+        @include mq($bp768) {
+          flex: 0 0 calc(cols(6) - rem(8));
+        }
+
+        @include mq($bp1200) {
+          flex: 0 0 cols(6);
+        }
+      }
+
+      .f--eyebrow {
+        @include margin(null null rem(4));
+        color: $color-primary;
+
+        span {
+          @include font-sans-serif-condensed;
+          @include font-size(12, 16);
+          letter-spacing: rem(1.3);
+          text-transform: uppercase;
+
+          @include mq($bp1200) {
+            @include font-size(16, 20);
+            letter-spacing: rem(1.6);
+          }
+        }
+      }
+
+      .f--section-title {
+        @include margin(null null rem(16));
+
+        @include mq($bp768) {
+          @include margin(null null 0);
+        }
+
+        h2 {
+          @include font-sans-serif-bold;
+          @include font-size(32, 40);
+          color: $color-black;
+
+          @include mq($bp1200) {
+            @include font-sans-serif-black;
+            @include font-size(48, 60);
+          }
+        }
+      }
+
+      .f--description {
+        @include mq($bp768) {
+          flex: 0 0 calc(cols(6) - rem(8));
+        }
+
+        @include mq($bp1200) {
+          flex: 0 0 cols(5);
+        }
+
+        p {
+          @include font-sans-serif-regular;
+          @include font-size(16, 24);
+        }
+      }
+    }
+
+    .cards-container {
+      @include mq($bp768) {
+        column-gap: rem(16);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: rem(24);
+      }
+
+      .card-item {
+        @include vertical-align-flex;
+        text-align: center;
+
+        &:not(:last-child) {
+          @include margin(null null rem(40));
+
+          @include mq($bp768) {
+            @include margin(null null 0);
+          }
+        }
+
+        a {
+          color: inherit;
+          display: block;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .f--image {
+          @include margin(null auto rem(24));
+          aspect-ratio: 3 / 2;
+          max-width: 100%;
+          width: 100%;
+
+          img {
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+
+        .f--cta-title {
+          @include margin(null null rem(12));
+
+          h3 {
+            @include font-sans-serif-bold;
+            @include font-size(20, 24);
+            color: $color-black;
+          }
+        }
+
+        .f--description {
+          p {
+            @include font-sans-serif-regular;
+            @include font-size(16, 24);
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
+}
