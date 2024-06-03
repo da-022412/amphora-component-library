@@ -1,0 +1,251 @@
+@import '../../src/scss/style';
+
+.cc--blog-post {
+  @include padding(rem(60) rem(16));
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(null rem(32));
+  }
+
+  .c--blog-post {
+    @include maxwidth;
+
+    .text-container {
+      @include margin(null null rem(48));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+
+      @include mq($bp1200) {
+        @include margin(null null rem(64));
+        @include padding(null cols(3));
+        column-gap: cols(1);
+      }
+
+      .f--eyebrow {
+        @include margin(null null rem(4));
+        color: $color-primary;
+
+        span {
+          @include font-sans-serif-condensed;
+          @include font-size(12, 16);
+          letter-spacing: rem(1.3);
+          text-transform: uppercase;
+
+          @include mq($bp1200) {
+            @include font-size(16, 20);
+            letter-spacing: rem(1.6);
+          }
+        }
+      }
+
+      .f--section-title {
+        @include margin(null null rem(16));
+
+        h2 {
+          @include font-sans-serif-bold;
+          @include font-size(32, 40);
+          color: $color-black;
+
+          @include mq($bp1200) {
+            @include font-sans-serif-black;
+            @include font-size(48, 60);
+          }
+        }
+      }
+
+      .f--description {
+        @include mq($bp768) {
+          flex: 0 0 calc(cols(6) - rem(8));
+        }
+
+        @include mq($bp1200) {
+          flex: 0 0 cols(5);
+        }
+
+        p {
+          @include font-sans-serif-regular;
+          @include font-size(16, 24);
+        }
+      }
+    }
+
+    .f--image {
+      @include margin(null auto rem(16));
+      aspect-ratio: 16 / 9;
+
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .cc--markup {
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+
+      @include mq($bp1200) {
+        @include padding(null cols(3));
+      }
+
+      .c--markup {
+        @include margin(rem(32) null);
+
+        @include mq($bp1200) {
+          @include margin(rem(48) null);
+        }
+
+        .f--eyebrow {
+          @include margin(null null rem(16));
+
+          span {
+            @include font-sans-serif-condensed;
+            @include font-size(12, 16);
+            @include margin(rem(4) null);
+            color: $color-primary;
+            display: block;
+          }
+        }
+
+        h1 {
+          @include font-sans-serif-black;
+          @include font-size(40, 60);
+          @include margin(rem(16) null rem(8));
+          color: $color-black;
+        }
+
+        h2 {
+          @include font-sans-serif-bold;
+          @include font-size(24, 32);
+          @include margin(rem(16) null rem(8));
+          color: $color-black;
+        }
+
+        h3 {
+          @include font-sans-serif-bold;
+          @include font-size(20, 28);
+          @include margin(rem(16) null rem(8));
+          color: $color-black;
+        }
+
+        h4 {
+          @include font-sans-serif-bold;
+          @include font-size(18, 24);
+          @include margin(rem(16) null rem(8));
+          color: $color-black;
+        }
+
+        h5 {
+          @include font-sans-serif-bold;
+          @include font-size(16, 24);
+          @include margin(rem(16) null rem(8));
+          color: $color-black;
+        }
+
+        p {
+          @include font-sans-serif-regular;
+          @include font-size(16, 24);
+          
+          &:not(:last-child) {
+            @include margin(null null rem(16));
+          }
+        }
+
+        a {
+          @include font-sans-serif-regular;
+          @include font-size(16, 24);
+          color: $color-primary;
+          text-decoration: underline;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:visited,
+          &:active {
+            color: $color-primary;
+          }
+        }
+
+        ul,
+        ol {
+          @include font-sans-serif-regular;
+          @include margin(rem(16) null);
+
+          li {
+            @include font-sans-serif-regular;
+            @include font-size(16, 24);
+
+            &:not(:last-child) {
+              @include margin(null null rem(8));
+            }
+          }
+
+          ul {
+            @include margin(rem(8) null);
+            list-style-type: circle;
+
+            ul {
+              list-style-type: square;
+            }
+          }
+
+          ol {
+            @include margin(rem(8) null);
+
+            li {
+              @include font-sans-serif-regular;
+              @include font-size(16, 24);
+            }
+          }
+        }
+
+        hr {
+          border: 0;
+          border-top: rem(1) solid $color-black;
+          margin: rem(32) 0;
+        }
+
+        figure {
+          margin: rem(16) 0;
+          max-width: 100%;
+        }
+
+        img {
+          display: block;
+          margin: rem(16) auto;
+          max-width: 100%;
+        }
+
+        figcaption {
+          @include font-sans-serif-regular;
+          @include font-size(12, 16);
+          color: $color-black;
+          text-align: center;
+        }
+
+        table {
+          border-collapse: collapse;
+          margin: rem(16) 0;
+          width: 100%;
+
+          th,
+          td {
+            @include font-sans-serif-regular;
+            border: rem(1) solid $color-black;
+            padding: rem(8);
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
