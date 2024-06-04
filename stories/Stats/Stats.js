@@ -10,7 +10,7 @@ export const createStats = ({ cards }) => {
               (card) => `
                 <li class="card-item">
                   <div class="f--image">
-                    <img src="${card.image.src}" alt="${card.image.alt}" />
+                    <img src="${card.image.src}" alt="${card.image.alt}" height="${card.image.height}" width="${card.image.width}" />
                   </div>
                   <div class="text-container">
                     <div class="f--cta-title">

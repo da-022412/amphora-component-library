@@ -27,6 +27,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/1920/1080",
           alt: "Alt 1",
+          height: 1080,
+          width: 1920,
         },
       },
       {
@@ -34,6 +36,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/600/600",
           alt: "Alt 1",
+          height: 600,
+          width: 600,
         },
       },
       {
@@ -41,6 +45,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/300/200",
           alt: "Alt 1",
+          height: 200,
+          width: 300,
         },
       },
       {
@@ -48,6 +54,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/400/200",
           alt: "Alt 1",
+          height: 200,
+          width: 400,
         },
       },
       {
@@ -55,6 +63,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/200/200",
           alt: "Alt 1",
+          height: 200,
+          width: 200,
         },
       },
     ],

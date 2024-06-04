@@ -1,12 +1,6 @@
 import "./steps.scss";
 
-export const createSteps = ({
-  eyebrow,
-  title,
-  description,
-  cards,
-  link,
-}) => {
+export const createSteps = ({ eyebrow, title, description, cards, link }) => {
   return `
     <section class="cc--steps">
       <div class="c--steps">
@@ -33,7 +27,7 @@ export const createSteps = ({
                 (card) => `
                   <div class="card-item">
                     <div class="f--image">
-                      <img src="${card.image.src}" alt="${card.image.alt}" />
+                      <img src="${card.image.src}" alt="${card.image.alt}" height="${card.image.height}" width="${card.image.width}" />
                     </div>
                     <div class="f--cta-title">
                       <h3>${card.title}</h3>

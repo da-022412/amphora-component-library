@@ -168,12 +168,14 @@
 
         .f--image {
           @include margin(null null rem(16));
+          height: rem(48);
 
           @include mq($bp1200) {
             @include margin(null null rem(24));
           }
 
           img {
+            height: 100%;
             max-width: rem(48);
             object-fit: cover;
           }

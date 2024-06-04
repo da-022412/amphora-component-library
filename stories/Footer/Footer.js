@@ -10,7 +10,7 @@ export const createFooter = ({ image, items, links }) => {
           <div class="f--image">
             <a href="/" aria-label="Back to home">
               <div class="image-container">
-                <img src="${image.src}" alt="${image.alt}" />
+                <img src="${image.src}" alt="${image.alt}" height="${image.height}" width="${image.width}" />
               </div>
             </a>
           </div>

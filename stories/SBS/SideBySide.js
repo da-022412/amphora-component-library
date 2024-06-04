@@ -21,12 +21,11 @@ export const createSideBySide = ({
         <div class="inner-container ${reverse === "yes" ? "reverse" : ""}">
           <div class="images-container">
             <div class="f--image">
-              <img src="${imageMain.src}" alt="${imageMain.alt}" />
+              <img src="${imageMain.src}" alt="${imageMain.alt}" height="${imageMain.height}" width="${imageMain.width}" />
             </div>
 
-
             <div class="f--image">
-              <img src="${imageSecondary.src}" alt="${imageSecondary.alt}" />
+              <img src="${imageSecondary.src}" alt="${imageSecondary.alt}" height="${imageSecondary.height}" width="${imageSecondary.width}" />
             </div>
 
             ${
@@ -104,11 +103,15 @@ export const createSideBySide = ({
                 : ""
             }
 
-            ${variant === "secondary" ? `
+            ${
+              variant === "secondary"
+                ? `
               <div class="f--image">
-                <img src="${imageSecondary.src}" alt="${imageSecondary.alt}" />
+                <img src="${imageSecondary.src}" alt="${imageSecondary.alt}" height="${imageSecondary.height}" width="${imageSecondary.width}" />
               </div>
-            ` : ""}
+            `
+                : ""
+            }
           </div>
         </div>
       </div>

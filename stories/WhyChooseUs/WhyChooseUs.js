@@ -17,7 +17,7 @@ export const createWhyChooseUs = ({
               .map(
                 (image) => `
                   <div class="f--image">
-                    <img src="${image.src}" alt="${image.alt}" />
+                    <img src="${image.src}" alt="${image.alt}" height="${image.height}" width="${image.width}" />
                   </div>
                 `
               )
@@ -44,7 +44,7 @@ export const createWhyChooseUs = ({
                     <li class="card-item">
                       <div class="title-container">
                         <div class="f--image">
-                          <img src="${card.image.src}" alt="${card.image.alt}" />
+                          <img src="${card.image.src}" alt="${card.image.alt}" height="${card.image.height}" width="${card.image.width}" />
                         </div>
                         <div class="f--cta-title">
                           <h3>${card.title}</h3>

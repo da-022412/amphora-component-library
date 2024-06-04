@@ -53,10 +53,14 @@ export const Primary = {
     imageMain: {
       src: "https://picsum.photos/600/700",
       alt: "Alt 1",
+      height: 700,
+      width: 600,
     },
     imageSecondary: {
       src: "https://picsum.photos/600/400",
       alt: "Alt 1",
+      height: 600,
+      width: 400,
     },
     card: {
       title: "1234",
@@ -95,10 +99,14 @@ export const Reverse = {
     imageMain: {
       src: "https://picsum.photos/600/700",
       alt: "Alt 1",
+      height: 700,
+      width: 600,
     },
     imageSecondary: {
       src: "https://picsum.photos/600/400",
       alt: "Alt 1",
+      height: 600,
+      width: 400,
     },
     card: {
       title: "1234",
@@ -117,10 +125,14 @@ export const Secondary = {
     imageMain: {
       src: "https://picsum.photos/600/700",
       alt: "Alt 1",
+      height: 700,
+      width: 600,
     },
     imageSecondary: {
       src: "https://picsum.photos/600/400",
       alt: "Alt 1",
+      height: 600,
+      width: 400,
     },
     cards: [
       {

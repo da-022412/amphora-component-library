@@ -31,6 +31,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/100",
           alt: "Alt 1",
+          height: 100,
+          width: 100,
         },
       },
       {
@@ -40,6 +42,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/100",
           alt: "Alt 1",
+          height: 100,
+          width: 100,
         },
       },
       {
@@ -49,6 +53,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/100",
           alt: "Alt 1",
+          height: 100,
+          width: 100,
         },
       },
     ],

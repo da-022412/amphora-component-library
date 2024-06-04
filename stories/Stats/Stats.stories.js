@@ -26,18 +26,26 @@ export const Primary = {
       {
         src: "https://picsum.photos/300/400",
         alt: "Alt 1",
+        height: 300,
+        width: 400,
       },
       {
         src: "https://picsum.photos/300/400",
         alt: "Alt 1",
+        height: 300,
+        width: 400,
       },
       {
         src: "https://picsum.photos/300/400",
         alt: "Alt 1",
+        height: 300,
+        width: 400,
       },
       {
         src: "https://picsum.photos/300/400",
         alt: "Alt 1",
+        height: 300,
+        width: 400,
       },
     ],
     cards: [
@@ -47,6 +55,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/50",
           alt: "Alt 1",
+          height: 50,
+          width: 50,
         },
       },
       {
@@ -55,6 +65,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/50",
           alt: "Alt 1",
+          height: 50,
+          width: 50,
         },
       },
       {
@@ -63,6 +75,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/50",
           alt: "Alt 1",
+          height: 50,
+          width: 50,
         },
       },
       {
@@ -71,6 +85,8 @@ export const Primary = {
         image: {
           src: "https://picsum.photos/50",
           alt: "Alt 1",
+          height: 50,
+          width: 50,
         },
       },
     ],

@@ -23,7 +23,7 @@ export const createContactForm = ({ eyebrow, title, description, items }) => {
                 (item) => `
                   <li class="item">
                     <div class="f--image">
-                      <img src="${item.image.src}" alt="${item.image.alt}" />
+                      <img src="${item.image.src}" alt="${item.image.alt}" height="${item.image.height}" width="${item.image.width}" />
                     </div>
                     <div class="text-container">
                       <div class="f--cta-title">

@@ -28,7 +28,7 @@ export const createHero = ({ eyebrow, title, link, cards }) => {
               (card) => `
                 <div class="card-item">
                   <div class="f--image">
-                    <img src="${card.image.src}" alt="${card.image.alt}" />
+                    <img src="${card.image.src}" alt="${card.image.alt}" height="${card.image.height}" width="${card.image.width}" />
                   </div>
                   <div class="f--cta-title">
                     <h3>${card.title}</h3>

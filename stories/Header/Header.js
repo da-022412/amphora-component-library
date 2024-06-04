@@ -9,7 +9,7 @@ export const createHeader = ({ image, items, links, callout1, callout2 }) => {
             <div class="f--image">
               <a href="/" aria-label="Back to home">
                 <div class="image-container">
-                  <img src="${image.src}" alt="${image.alt}" />
+                  <img src="${image.src}" alt="${image.alt}" height="${image.height}" width="${image.width}" />
                 </div>
               </a>
             </div>
@@ -21,7 +21,7 @@ export const createHeader = ({ image, items, links, callout1, callout2 }) => {
                     <li class="link">
                       <a href="${link.href}" aria-label="${link.ariaLabel}">
                         <div class="f--image">
-                          <img src="${link.image.src}" alt="${link.image.alt}" />
+                          <img src="${link.image.src}" alt="${link.image.alt}" height="${link.image.height}" width="${link.image.width}" />
                         </div>
                         <div class="text-container">
                           <div class="f--cta-title">
