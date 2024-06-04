@@ -25,7 +25,7 @@ export const createBlogPosts = ({ eyebrow, title, description, cards }) => {
             .map(
               (card) => `
                 <div class="card-item">
-                  <a href="${card.link}">
+                  <a href="${card.link.href}" aria-label="${card.link.ariaLabel}">
                     <div class="f--image">
                       <img src="${card.image.src}" alt="${card.image.alt}" height="${card.image.height}" width="${card.image.width}" />
                     </div>

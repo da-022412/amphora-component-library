@@ -30,6 +30,10 @@ export const Primary = {
           height: 1080,
           width: 1920,
         },
+        link: {
+          href: "https://www.example.com/",
+          ariaLabel: "An Example Aria Label for CTA Link",
+        },
       },
       {
         title: "Lorem ipsum",
@@ -38,6 +42,10 @@ export const Primary = {
           alt: "Alt 1",
           height: 600,
           width: 600,
+        },
+        link: {
+          href: "https://www.example.com/",
+          ariaLabel: "An Example Aria Label for CTA Link",
         },
       },
       {
@@ -48,6 +56,10 @@ export const Primary = {
           height: 200,
           width: 300,
         },
+        link: {
+          href: "https://www.example.com/",
+          ariaLabel: "An Example Aria Label for CTA Link",
+        },
       },
       {
         title: "Lorem ipsum",
@@ -57,6 +69,10 @@ export const Primary = {
           height: 200,
           width: 400,
         },
+        link: {
+          href: "https://www.example.com/",
+          ariaLabel: "An Example Aria Label for CTA Link",
+        },
       },
       {
         title: "Lorem ipsum",
@@ -65,6 +81,10 @@ export const Primary = {
           alt: "Alt 1",
           height: 200,
           width: 200,
+        },
+        link: {
+          href: "https://www.example.com/",
+          ariaLabel: "An Example Aria Label for CTA Link",
         },
       },
     ],
