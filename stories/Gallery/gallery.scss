@@ -1,0 +1,52 @@
+@import '../../src/scss/style';
+
+.cc--gallery {
+  @include padding(rem(48) rem(16));
+
+  @include mq($bp768) {
+    @include padding(null rem(24));
+  }
+
+  @include mq($bp1200) {
+    @include padding(rem(60) rem(32) rem(48));
+  }
+
+  .c--gallery {
+    @include maxwidth;
+
+    .cards-container {
+      @include mq($bp768) {
+        display: grid;
+        gap: rem(20);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @include mq($bp1200) {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card-item {
+        @include vertical-align-flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          @include margin(null null rem(40));
+
+          @include mq($bp768) {
+            @include margin(null null 0);
+          }
+        }
+
+        .f--image {
+          width: auto;
+
+          img {
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
